@@ -1,7 +1,7 @@
 {
   "name": "todos",
   "version": "1.0.0",
-  "description": "Example of how to use flux-tools",
+  "description": "Example of how to use fluxtore",
   "main": "index.js",
   "scripts": {
     "build": "browserify -t reactify -r fluxtore ./src/app.js > js/bundle.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ryanez/flux-tools/examples/todos"
+    "url": "https://github.com/ryanez/fluxtore/examples/todos"
   },
   "keywords": [
     "react",
@@ -20,7 +20,7 @@
   "author": "Rodrigo Yanez",
   "license": "MIT",
   "devDependencies": {
-    "fluxtore": "0.0.1",
+    "fluxtore": "0.0.3",
     "ng-di": "^0.1.1",
     "react": "^0.13.3",
     "reactify": "^1.1.1",
