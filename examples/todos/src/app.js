@@ -24,7 +24,6 @@ ngdi.module('todos', [])
     .constant('document', global.document)
     .constant('React', require('react/addons'))
 	.run(['React', 'Main', 'document', function(React, Main, document) {
-        console.log('orale simon vato loco cholo marihuano pastilludo');
 		React.render(
 		  <Main />,
 		  document.getElementById('todosapp')
