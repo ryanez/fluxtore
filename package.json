@@ -1,0 +1,29 @@
+{
+  "name": "flux-tools",
+  "version": "1.0.0",
+  "description": "Makes flux + React easy to use and understand",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -r ./src/index.js:flux-tools > dist/flux-tools.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanez/flux-tools"
+  },
+  "keywords": [
+    "react",
+    "flux",
+    "browserify"
+  ],
+  "author": "Rodrigo Yanez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanez/flux-tools/issues"
+  },
+  "homepage": "https://github.com/ryanez/flux-tools",
+  "devDependencies": {
+    "underscore": "^1.8.3",
+    "browserify": "^9.0.3"
+  }
+}
