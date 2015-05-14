@@ -16,7 +16,7 @@ var Dispatcher = require('flux').Dispatcher,
 	reduce = Array.prototype.reduce,
 	toString = Object.prototype.toString;
 
-module.exports = function(proto) {
+module.exports.createStore = function(proto) {
 	var store = extend(proto, eventify(proto.events || []));
 
 	store.dispatchToken = register();
