@@ -4,7 +4,7 @@
   "description": "Example of how to use flux-tools",
   "main": "index.js",
   "scripts": {
-    "build": "browserify -t reactify -x fluxtore ./src/app.js > js/bundle.js",
+    "build": "browserify -t reactify -r fluxtore ./src/app.js > js/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "author": "Rodrigo Yanez",
   "license": "MIT",
   "devDependencies": {
+    "fluxtore": "0.0.1",
     "ng-di": "^0.1.1",
     "react": "^0.13.3",
     "reactify": "^1.1.1",
