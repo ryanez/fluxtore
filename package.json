@@ -4,7 +4,7 @@
   "description": "Makes flux + React easy to use and understand",
   "main": "index.js",
   "scripts": {
-    "prepublish": "browserify -r flux -r object-assign -r ./src/index.js:fluxtore > dist/fluxtore.js",
+    "prepublish": "gulp publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +17,8 @@
     "browserify"
   ],
   "files": [
-    "dist/",
+    "lib/",
+    "index.js",
     "LICENSE"
   ],
   "author": "Rodrigo Yanez <ryanez@nearsoft.com>",
