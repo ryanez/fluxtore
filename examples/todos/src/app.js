@@ -1,19 +1,12 @@
 'use strict';
 
 var ngdi = require('ng-di');
-var Dispatcher = require('flux').Dispatcher;
+var fluxtore = require('fluxtore');
 var underscore = require('underscore');
-var emitter = require('events').EventEmitter;
-var fluxtools = require('flux-tools');
 
 ngdi.module('todos', [])
-    //dependencies needed by fluxtools
+    .constant('fluxtore', fluxtore)
     .constant('_', underscore)
-    .constant('EventEmitter', emitter)
-    .constant('dispatcher', new Dispatcher())
-    //registering flux tools
-    .factory('eventify', fluxtools.eventify)
-    .factory('storify', fluxtools.storify)
     //registering stores
     .factory('todoStore', require('./stores/todoStore'))
     //registering ui components

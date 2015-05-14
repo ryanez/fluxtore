@@ -1,22 +1,23 @@
 'use strict';
 
 module.exports = store;
-store.$inject = ['eventify', 'storify', '_'];
+store.$inject = ['fluxtore', '_'];
 
-var events = ['change'];
-
-function store(eventify, storify, _) {
+function store(fluxtore, _) {
     var cache = [],
         idSeed = 0,
-        proxy = eventify(events),
-        action = storify(proxy).action;
+        proxy;
 
-    return _.extend(proxy, {
+    return proxy = fluxtore.createStore({
+        events: ['change'],
+
         getTodos: getTodos,
 
-        addTodo: action(addTodo),
+        actions: {
+            addTodo: addTodo,
 
-        removeTodo: action(removeTodo)
+            removeTodo: removeTodo
+        }
     });
 
     function addTodo(text) {
