@@ -7,4 +7,4 @@
 
  'use strict';
 
-module.exports.createStore = require('./fluxtore');
+module.exports = require('./lib/fluxtore');
