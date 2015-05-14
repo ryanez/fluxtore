@@ -80,11 +80,11 @@ module.exports.createStore = function(proto) {
 	reduce.call(Object.keys(proto.actions || {}), function(memo, key) {
 		var value = proto.actions[key];
 
-		store[key] = isFunc(value) ?
+		memo[key] = isFunc(value) ?
 			action(value) :
 			action(value.action, value.waitFor);
 
-		return store;
+		return memo;
 	}, store);
 
 	return store;
