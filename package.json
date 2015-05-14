@@ -1,29 +1,34 @@
 {
-  "name": "flux-tools",
-  "version": "1.0.0",
+  "name": "fluxore",
+  "version": "0.0.1",
   "description": "Makes flux + React easy to use and understand",
   "main": "index.js",
   "scripts": {
-    "build": "browserify -r ./src/index.js:flux-tools > dist/flux-tools.js",
+    "prepublish": "browserify -r flux -r object-assign -r ./src/index.js:fluxtore > dist/fluxtore.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ryanez/flux-tools"
+    "url": "https://github.com/ryanez/fluxtore"
   },
   "keywords": [
     "react",
     "flux",
     "browserify"
   ],
-  "author": "Rodrigo Yanez",
+  "files": [
+    "dist/",
+    "LICENSE"
+  ],
+  "author": "Rodrigo Yanez <ryanez@nearsoft.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ryanez/flux-tools/issues"
+    "url": "https://github.com/ryanez/fluxtore/issues"
   },
-  "homepage": "https://github.com/ryanez/flux-tools",
+  "homepage": "https://github.com/ryanez/fluxtore",
   "devDependencies": {
-    "underscore": "^1.8.3",
-    "browserify": "^9.0.3"
+    "browserify": "^9.0.3",
+    "flux": "^2.0.3",
+    "object-assign": "^2.0.0"
   }
 }
