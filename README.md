@@ -1,6 +1,9 @@
 # fluxtore
 Create Flux stores in an easy way. You wont need the constants and actions dependencies, everything will be isolated in the store.
 
+# Install
+Fluxtore is available as [npm module](https://www.npmjs.com/package/fluxtore) so you can run `npm install fluxtore`.
+
 # Creating a store
 ```
 var fluxtore = require('fluxtore');
