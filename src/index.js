@@ -1,14 +1,10 @@
-'use strict';
+/**
+ * Copyright (c) 2015 Rodrigo Yanez <ryanez@nearsoft.com>
+ *
+ * This source code is licensed under the MIT-style license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
-var eventify = require('./eventify');
-var storify = require('./storify');
+ 'use strict';
 
-module.exports = function(dispatcher, emitter, underscore) {
-	return {
-		eventify: eventify(emitter, underscore),
-		storify: storify(dispatcher)	
-	};
-};
-
-module.exports.eventify = eventify;
-module.exports.storify = storify;
+module.exports.createStore = require('./fluxtore');
