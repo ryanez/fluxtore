@@ -1,6 +1,6 @@
 {
   "name": "fluxtore",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Makes flux + React easy to use and understand",
   "main": "index.js",
   "scripts": {
