@@ -16,12 +16,12 @@ var Dispatcher = require('flux').Dispatcher,
 	reduce = Array.prototype.reduce,
 	toString = Object.prototype.toString;
 
-module.exports.createStore = function(proto) {
+module.exports.createStore = function (proto) {
 	var store = extend(proto, eventify(proto.events || []));
 
 	store.dispatchToken = register();
 
-	reduce.call(Object.keys(proto.actions || {}), function(memo, key) {
+	reduce.call(Object.keys(proto.actions || {}), function (memo, key) {
 		var value = proto.actions[key];
 
 		memo[key] = isFunc(value) ?
@@ -34,7 +34,7 @@ module.exports.createStore = function(proto) {
 	return store;
 
 	function register() {
-		return dispatcher.register(function(action) {
+		return dispatcher.register(function (action) {
 			if (action.store === store) {
 				if (action.waitFor) {
 					dispatcher.waitFor(action.waitFor);
@@ -45,7 +45,7 @@ module.exports.createStore = function(proto) {
 	}
 
 	function action(callback, waitFor) {
-		return function() {
+		return function () {
 			splice.call(arguments, 0, 0, store);
 			
 			dispatcher.dispatch({
