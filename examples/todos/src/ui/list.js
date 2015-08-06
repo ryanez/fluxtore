@@ -23,10 +23,4 @@ function component(React, todoStore) {
             todoStore.removeTodo(todo.id);
         }
     });
-
-    function getTodosState() {
-        return { 
-            todos: todoStore.getTodos()
-        };
-    }
 }
