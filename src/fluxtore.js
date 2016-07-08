@@ -55,8 +55,6 @@ module.exports.createStore = function (proto) {
 			});
 		};
 	}
-
-	return store;
 };
 
 function isFunc(obj) {
