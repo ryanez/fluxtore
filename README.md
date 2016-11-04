@@ -5,7 +5,7 @@ Create Flux stores in an easy way. You wont need the constants and actions depen
 Fluxtore is available as [npm module](https://www.npmjs.com/package/fluxtore) so you can run `npm install fluxtore`.
 
 # Creating a store
-```
+```js
 var fluxtore = require('fluxtore');
 var todos = [];
 var store = fluxtore.createStore({
@@ -20,7 +20,7 @@ module.exports = store;
 ```
 
 once you have your `store` you can use it in your react Components
-```
+```js
 var todosStore = require('./todosStore');
 var TodoList = require('./todoList');
 var todos = React.createClass({
@@ -45,7 +45,7 @@ function getTodosState() {
 # Events
 What about the events? I want to be notified if there is some chage in the list. You can specify a list of events that your store will emit and of course support subscriptions to.
 
-```
+```js
 var fluxtore = require('fluxtore');
 var todos = [];
 var store = fluxtore.createStore({
@@ -61,9 +61,9 @@ function getTodos() {
 module.exports = store;
 ```
 
-As a magic act your store now will support `store.addChangeListener`, `store.removeChangeListner` and `store.emitChange`. this way you can update your component to properly refresh data.
+As a magic act your store now will support `store.addChangeListener`, `store.removeChangeListener` and `store.emitChange`. this way you can update your component to properly refresh data.
 
-```
+```js
 var todosStore = require('./todosStore');
 var TodoList = require('./todoList');
 var todos = React.createClass({
@@ -99,7 +99,7 @@ function getTodosState() {
 # Actions
 Don't worry creating actions is pretty simple, just expose them on your store.
 
-```
+```js
 var fluxtore = require('fluxtore');
 var todos = [];
 var idSeed = 0;
@@ -130,7 +130,7 @@ module.exports = store;
 # Calling actions from components
 
 
-```
+```js
 var todosStore = require('./todosStore');
 var addTodo = React.createClass({
     getInitialState: function() {
